@@ -38,7 +38,7 @@ function Write-Theme {
     }
 
     # Writes the drive portion
-    $prompt += Write-Prompt -Object (Get-FullPath -dir $pwd) -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
+    $prompt += Write-Prompt -Object (Get-FullPath -dir $pwd) -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
     $prompt += Write-Prompt -Object ' ' -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
 
     $status = Get-VCSStatus
