@@ -20,7 +20,7 @@ function Write-Theme {
 
     #check for elevated prompt
     If (Test-Administrator) {
-        $prompt += Write-Prompt -Object "$($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.WithBackgroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
+        $prompt += Write-Prompt -Object " $($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.WithBackgroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
     }
 
     $user = [System.Environment]::UserName
