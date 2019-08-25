@@ -2,7 +2,7 @@ Import-Module posh-git
 Import-Module oh-my-posh
 $Env:Path += ";C:\Users\alivi\.cargo\bin"
 Set-Alias -Name cat -Value bat -Option AllScope
-Set-Theme Agnoster
+Set-Theme Phoebe
 function Get-Items {
     lsd -ltrA
 }
@@ -14,6 +14,10 @@ function colors() {
         Write-Host (" {0,2} {1,$max} " -f [int]$color, $color) -NoNewline
         Write-Host "$color" -Foreground $color
     }
+}
+
+function themec() {
+    Show-ThemeColors
 }
 
 function Get-Env-Variables {
