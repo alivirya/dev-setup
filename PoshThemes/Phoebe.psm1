@@ -64,6 +64,7 @@ function Write-Theme {
     $prompt
 }
 
+
 $sl = $global:ThemeSettings #local settings
 $sl.PromptSymbols.SegmentForwardSymbol = [char]::ConvertFromUtf32(0xE0B0)
 $sl.PromptSymbols.ElevatedSymbol = [char]::ConvertFromUtf32(0xF7D0)
