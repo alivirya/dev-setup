@@ -28,7 +28,7 @@ function Write-Theme {
         $prompt += Write-Prompt -Object "Audrey " -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
     }
 
-    $prompt += Write-Prompt -Object " $([char]::ConvertFromUtf32(0xE385)) $(Get-Date -Format "MM/dd/yyyy HH:mm") " -ForegroundColor $sl.Colors.SessionInfoBackgroundColor -BackgroundColor $sl.Colors.GitNoLocalChangesAndAheadColor
+    $prompt += Write-Prompt -Object " $([char]::ConvertFromUtf32(0xE385)) $(Get-Date -Format "MM/dd/yyyy HH:mm") " -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $([ConsoleColor]::DarkGray)
     $prompt += Write-Prompt -Object " " -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
 
     if (Test-VirtualEnv) {
