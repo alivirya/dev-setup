@@ -25,15 +25,11 @@ function Get-Env-Variables {
 }
 
 function proj {
-    Set-Location ~/Documents/projs
+    Set-Location ~/Documents/gcmds-primary
 }
 
 function profile {
     Set-Location ~/Documents/WindowsPowerShell
-}
-
-function pt4 {
-    Set-Location ~/Documents/projs/AR-Lab-Orientation
 }
 
 function downloads {
@@ -52,7 +48,7 @@ function weather {
 
 function Get-Weather {
     [hashtable]$forecast = @{ }
-    $weather = Invoke-WebRequest "api.openweathermap.org/data/2.5/weather?APPID=[apiId]&id=2193734&units=metric" | ConvertFrom-Json
+    $weather = Invoke-WebRequest "api.openweathermap.org/data/2.5/weather?APPID=[appId]&id=2193734&units=metric" | ConvertFrom-Json
     $weatherStatus = $weather.weather.main.ToLower()
     $weatherSymbol = ""
     if ($weatherStatus -eq "rain") {
@@ -69,5 +65,5 @@ function Get-Weather {
     return $forecast
 }
 
-Set-Alias -Name ls -Value Get-Items -Option AllScope
+# Set-Alias -Name ls -Value Get-Items -Option AllScope
 Set-Alias -Name env -Value Get-Env-Variables -Option AllScope

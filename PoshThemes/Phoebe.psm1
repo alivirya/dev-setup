@@ -17,7 +17,11 @@ function Write-Theme {
     If ($lastCommandFailed) {
         $prompt += Write-Prompt -Object "$($sl.PromptSymbols.FailedCommandSymbol) " -ForegroundColor $sl.Colors.CommandFailedIconForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
     }
-
+    If (Test-Path env:ASSUME_AWS_ROLE) {
+        $prompt += Write-Prompt -Object "$([char]::ConvertFromUtf32(0xE0B6))" -ForegroundColor $([ConsoleColor]::Green) -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
+        $prompt += Write-Prompt -Object "$ENV:ASSUME_AWS_ROLE" -ForegroundColor $sl.Colors.SessionInfoBackgroundColor -BackgroundColor $([ConsoleColor]::Green)
+        $prompt += Write-Prompt -Object "$([char]::ConvertFromUtf32(0xE0B4))" -ForegroundColor $([ConsoleColor]::Green) -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
+    }
     #check for elevated prompt
     If (Test-Administrator) {
         $prompt += Write-Prompt -Object " $($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.WithBackgroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
