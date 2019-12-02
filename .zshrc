@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=~/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/audneverland/.oh-my-zsh"
 
@@ -19,6 +19,7 @@ alias docs="cd ~/Documents"
 alias downloads="cd ~/Downloads"
 alias pics="cd ~/Pictures"
 alias proj="cd ~/Documents/projs"
+alias tv="cd ~/Movies/TV"
 alias ls="lsd -la"
 alias cat="bat"
 alias zshconf="subl ~/.zshrc"
@@ -43,7 +44,7 @@ alias zshconf="subl ~/.zshrc"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, aws, docker)
+plugins=(git aws docker)
 
 source $ZSH/oh-my-zsh.sh
 
