@@ -31,6 +31,7 @@ brew install yarn
 ### Installing for Windows
 Prerequisite: Installing [Chocolatey](https://chocolatey.org/docs/installation)
 ```
+choco install bat
 choco install spotify
 choco install sublimetext3
 choco install docker
@@ -47,8 +48,12 @@ pip3 install awscli
 ```
 
 ## Setup
-* Set up (oh-my-posh/zsh)
 * Install fonts (UbuntuMono, SpaceMono, RobotoMono).
+* Install Rust
+* Install [lsd](https://github.com/Peltoche/lsd)
+* cargo install lsd
+* Install [bat](https://github.com/sharkdp/bat)
+* Set up (oh-my-posh/zsh)
 * Download files from aws s3 (depends)
 * Clone git repositories
 * Use the scripts in this repository to set up powershell and zsh shells.
