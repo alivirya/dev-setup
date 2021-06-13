@@ -1,0 +1,18 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format=""" $aws[♥](red) Audo [](bold cyan) $directory$git_branch"""
+
+[directory]
+style = "white"
+
+[git_branch]
+symbol = "[](bold green) "
+style = "green"
+format = "[$symbol$branch]($style) "	
+
+[package]
+disabled = true
+
+[aws]
+format = "[$symbol($profile )(($region) )]($style)"

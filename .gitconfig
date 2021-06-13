@@ -1,0 +1,25 @@
+[user]
+	name = Audrey Livirya
+	email = audrey.livirya@xero.com
+
+[alias]
+	minilog = log --oneline -5
+	midilog = log --oneline -10
+	amend = commit --amend --no-edit
+	pn = !git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+	cb = !git checkout master && git pull && git checkout -b
+	fresh = !git checkout master && git pull
+	cm = !git add . && git commit -m
+	draft = !git add . && git commit -m "draft"
+	undo = git reset HEAD~
+	co = checkout
+	s = status
+[init]
+	templatedir = C:/Users/audrey.livirya/.git-templates
+[core]
+	hooksPath = C:/Users/audrey.livirya/.git-templates/hooks/
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
